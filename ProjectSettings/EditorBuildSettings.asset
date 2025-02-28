@@ -26,18 +26,18 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/BNG Framework/Scenes/Quest Demo.unity
     guid: 20abffae0ea5004438fe0e95b6627841
-  - enabled: 0
-    path: Assets/BNG Framework/Scenes/AD_L1.unity
-    guid: 12100bfc05d522642b4b4810aacfc475
-  - enabled: 0
-    path: Assets/Game3/Scenes/Game 3.unity
-    guid: 8180538b7694c56449f8636efe2d7359
+  - enabled: 1
+    path: Assets/BNG Framework/Scenes/Lobby.unity
+    guid: b13eb79f443781545b3fbf5af4f87606
   - enabled: 1
     path: Assets/BNG Framework/Scenes/Math Ease.unity
     guid: d205aea8c302ab744a6fe453f050592d
   - enabled: 1
-    path: Assets/BNG Framework/Scenes/Lobby.unity
-    guid: b13eb79f443781545b3fbf5af4f87606
+    path: Assets/Game3/Scenes/Game 3.unity
+    guid: 8180538b7694c56449f8636efe2d7359
+  - enabled: 1
+    path: Assets/BNG Framework/Scenes/AD_L1.unity
+    guid: 12100bfc05d522642b4b4810aacfc475
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 2a3a60053ac8ab546a36092c0aae3bc9,
       type: 2}

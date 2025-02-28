@@ -42,12 +42,6 @@ public class AD_L1_VoiceManager : MonoBehaviour
         {
             VoiceClipData clipData = voiceClips[currentClipIndex];
 
-            // Check if we should pause after this clip
-            if (clipData.pauseAfterClip)
-            {
-                isPaused = true;
-            }
-
             voiceCoroutine = StartCoroutine(HandleVoicePlayback(clipData));
         }
     }
@@ -66,10 +60,13 @@ public class AD_L1_VoiceManager : MonoBehaviour
 
         yield return new WaitForSeconds(orbAudioSource.clip.length);
 
-        currentClipIndex++;
-
-        if (!isPaused)
+        if (clipData.pauseAfterClip)
         {
+            isPaused = true; // Set pause state after playing the clip
+        }
+        else
+        {
+            currentClipIndex++; // Increment only if not pausing
             PlayNextVoice();
         }
     }
@@ -85,6 +82,7 @@ public class AD_L1_VoiceManager : MonoBehaviour
         if (isPaused)
         {
             isPaused = false;
+            currentClipIndex++; // Move to the next clip before resuming
             PlayNextVoice();
         }
     }
